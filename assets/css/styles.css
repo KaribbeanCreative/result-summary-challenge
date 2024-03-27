@@ -1,0 +1,305 @@
+/*
+    Author : Karibbean Creative
+    Date : 26/03/2024
+    Version : 2.0
+        - Adding media queries
+*/
+
+
+/* ========================================> Typography*/
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+
+/* ========================================> Reset CSS*/
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ========================================> Custom variables */
+:root {
+    /* Primary colors */
+    --color-primary-red: hsl(0, 100%, 67%);
+    --color-primary-orange: hsl(39, 100%, 56%);
+    --color-primary-teal: hsl(166, 100%, 37%);
+    --color-primary-blue: hsl(234, 85%, 45%);
+
+    /* Primary transparent colors */
+    --color-primary-red-transparent: hsla(0, 100%, 67%, 0.1);
+    --color-primary-orange-transparent: hsla(39, 100%, 56%, 0.1);
+    --color-primary-teal-transparent: hsla(166, 100%, 37%, 0.1);
+    --color-primary-blue-transparent: hsla(234, 85%, 45%, 0.1);
+    
+    /* Gradient background colors */
+    --color-gradient-light-slate-blue: hsl(252, 100%, 67%);
+    --color-gradient-light-royal-blue: hsl(241, 81%, 54%);
+    
+    /* Gradient circle colors */
+    --color-gradient-violet-blue: hsl(256, 72%, 46%);
+    --color-gradient-persian-blue: hsla(241, 72%, 46%, 0);
+
+    /* Neutral colors */
+    --color-neutral-white: hsl(0, 0%, 100%);
+    --color-neutral-pale-blue: hsl(221, 100%, 96%);
+    --color-neutral-light-lavender: hsl(241, 100%, 89%);
+    --color-neutral-dark-gray-blue: hsl(224, 30%, 27%);
+    --color-neutral-gray : hsl(220, 2%, 72%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* ========================================> Global */
+body {
+    height: 100vh;
+    background-color: var(--color-neutral-white);
+    font-family: 'HankenGrotesk', sans-serif;
+    position: relative;
+}
+
+h1,h2 {
+    color: var(--color-neutral-white);
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+    color: var(--color-neutral-light-lavender);
+    margin: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    letter-spacing: 1.1px;
+}
+
+p {
+    width: 85%;
+    color: var(--color-neutral-light-lavender);
+    margin: auto;
+    font-size: 1.5rem;
+}
+
+img {
+    padding: 1rem;
+}
+
+/* ========================================> Component */
+.container {
+    background-color: var(--color-neutral-pale-blue);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    width: 31rem;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ========================================> Result Part */
+.result-part {
+    background: linear-gradient(180deg, var(--color-gradient-light-slate-blue) 0%, var(--color-gradient-light-royal-blue) 100%);
+    border-radius: 15px;
+    display: inline-block;
+    text-align: center;
+    padding: 1rem 0 3rem;
+}
+
+.circle-gradient {
+    width: 15rem;
+    height: 15rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: linear-gradient(180deg,
+        hsl(256, 72%, 46%) 0%,
+        hsla(241, 68%, 61%, 0.459) 100%);
+    position: relative;
+}
+
+.center-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ========================================> Sumamry Part */
+.summary-title {
+    color: var(--color-neutral-dark-gray-blue);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    margin: 2rem;
+}
+
+.score {
+    display: flex;
+    justify-content: right;
+    margin-right: 2rem;
+}
+
+.weight {
+    color: var(--color-neutral-dark-gray-blue);
+    font-weight: 700;
+    padding-right: 5px;
+}
+
+.on-hundred {
+    color: var(--color-neutral-gray);
+}
+
+.red {
+    color: var(--color-primary-red);
+    background-color: var(--color-primary-red-transparent);
+}
+
+.orange {
+    color: var(--color-primary-orange);
+    background-color: var(--color-primary-orange-transparent);
+}
+
+.teal {
+    color: var(--color-primary-teal);
+    background-color: var(--color-primary-teal-transparent);
+}
+
+.blue {
+    color: var(--color-primary-blue);
+    background-color: var(--color-primary-blue-transparent);
+}
+
+/* ========================================> Button */
+.btn-center {
+    display: flex;
+    padding-bottom: 2.5rem;
+}
+
+.btn {
+    background-color: var(--color-neutral-dark-gray-blue);
+    color: var(--color-neutral-white);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    width: 87%;
+    padding: 1.5rem;
+    border-radius: 50px;
+    border: none;
+    margin: 0 auto;
+}
+
+.btn:hover {
+    background: linear-gradient(180deg,
+        var(--color-gradient-light-slate-blue) 0%,
+        var(--color-gradient-light-royal-blue) 100%);
+    cursor: pointer;
+}
+
+
+/* ========================================> Media Queries */
+@media (min-width: 1000px) {
+    .container {
+        width: 60rem;
+        height: 40rem;
+        display: flex;
+    }
+
+    .result-part, .summary-part {
+        width: 50%;
+        height: 100%;
+    }
+
+    .result-part {
+        padding: 1rem;
+    }
+
+    .summary-part {
+        padding: 2rem;
+    }
+
+    .on-hundred-light {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1.6rem;
+        padding-top: 1.5rem;
+    }
+    
+    .btn {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+
+
+
+
+
+
+
+/*
+
+
+
+.rows {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: space-around;
+}
+
+.row {
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+/*  */
+
+
+
+/*
+    
+
+    
+
+    .score-part .info {
+        width: 250px;
+    }
+
+    .summary-part {
+        width: 100%;
+    }
+} */
+
+
+
+
+
+
+
+
+
+medias queries desktop
+/*
+}
+
+/*  
+
+}
+*/
